@@ -25,3 +25,67 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.navbar-menu div {
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.navbar-menu {
+  width: 30px;
+  display: block;
+  margin: 1em 0 0 1em;
+}
+
+.one {
+  width: 30px;
+}
+
+.two {
+  width: 20px;
+}
+
+.three {
+  width: 25px;
+}
+
+.navbar-menu:hover div {
+  width: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #333;
+  color: #95A9E7;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #9A8DD4;
+  min-width: 260px;
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 12px;
+  color: #02081a;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.dropdown-item:hover {
+  background-color: #8575ce;
+}
+
