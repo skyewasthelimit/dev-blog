@@ -17,13 +17,9 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(209, 206, 206);
+  background-color: black;
+  text-shadow: 1px 0.1px #a294e0;
 }
 
 .navbar-menu div {
@@ -89,7 +85,6 @@ body {
   background-color: #8575ce;
 }
 
-/* Modal */
 .modal {
   display: flex;
   position: fixed;

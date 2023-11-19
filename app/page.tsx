@@ -1,7 +1,8 @@
 'use client';
-// Import React and other necessary modules
 import React, { useState } from "react";
 import Modal from './modal.jsx';
+
+import InstagramLogo from './images/instagramlogo.png'
 
 export default function Home() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -10,14 +11,17 @@ export default function Home() {
   const [newContent, setNewContent] = useState("");
   const [blogEntries, setBlogEntries] = useState([
     {
+      date: "11 - 19 - 2023",
+      content: "Added footer social media links to dev blog website. Readjusted color scheme and added more accessible text. Fixed all margins and spacing on page to be more pixel perfect."
+    },
+    {
       date: "11 - 18 - 2023",
       content: "Continued working on dev blog website. Learned how to create sticky footers that stay at the bottom of pages. Studied more Tailwind CSS docs to easier implement into future projects. Created a modal that allows us to dynamically add blogs as needed."
     },
     {
       date: "11 - 16 - 2023",
       content: "Created a dev blog today and worked on several W3 school problems as well as attempted and solved a few JS/React questions via BFE website and leetcode.com."
-    },
-    // Add more blog entries as needed
+    }
   ]);
 
   const openModal = () => setModalOpen(true);
@@ -42,7 +46,7 @@ export default function Home() {
 
   return (
     <div>
-      <button onClick={openModal} className="hover:cursor-pointer hover:bg-slate-400 ml-[95vw] bg-white w-6 h-7 z-1 absolute text-black text-center">
+      <button onClick={openModal} className="hover:cursor-pointer hover:bg-slate-400 ml-[95vw] bg-white w-6 h-7 z-1 absolute text-black text-center right-4">
         +
       </button>
 
@@ -93,14 +97,23 @@ export default function Home() {
             </div>
           </div>
         ))}
+        <div className="text-center mt-4 flex justify-center">
+          <div className="m-auto hover:text-[#C2A0E0]"><a href="">2022</a></div>
+          <div className="m-auto hover:text-[#C2A0E0]"><a href="">2021</a></div>
+          <div className="m-auto hover:text-[#C2A0E0]"><a href="">2020</a></div>
+        </div>
       </div>
       <div className="w-full h-20 bg-[#0E1F42] flex-grow-1 font-sans text-[#AABDFC]">
         <p className="mx-3 p-1">
+        <a href="" target="_blank"><img className="absolute ml-[90vw] right-4 mt-4" style={{ width: '30px', height: '30px' }} src="/images/instagramlogo.png" alt="Instagram Logo" /></a>
+        <a href="https://twitter.com/skyewasthelimit" target="_blank"><img className="absolute ml-[90vw] right-14 mt-4" style={{ width: '30px', height: '30px' }} src="/images/twitterlogo.png" alt="Twitter Logo" /></a>
+        <a href="https://www.linkedin.com/in/skye-mclean-a43982295" target="_blank"><img className="absolute ml-[90vw] right-24 mt-4" style={{ width: '30px', height: '30px' }} src="/images/linkedinlogo.png" alt="LinkedIn Logo" /></a>
           Skye McLean <br />
-          Victoria, BC <br />
-          Contact me @ skyemclean87@gmail.com
+          Web Development & Programming <br />
+          Contact me: <a className="hover:text-[#C2A0E0]" href="">skyemclean87@gmail.com</a>
         </p>
       </div>
     </div>
   );
 }
+
